@@ -14,4 +14,30 @@
       </ol>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control 
+        (oddGenEvent)="onOddGenerated($event)"        
+        (evenGenEvent)="onEvenGenerated($event)"
+        ></app-game-control>
+    </div>
+  </div>
+
+  
+  <div class="row">
+    <div class="col-xs-6">
+      ODD
+      <p *ngFor="let element of oddElements">
+        <app-odd [num]="element"></app-odd>
+      </p>
+    </div>
+    <div class="col-xs-6">
+      EVEN
+      <p *ngFor="let element of evenElements">
+        <app-even [num]="element"></app-even>
+      </p>
+    </div>
+  </div>
+
 </div>
